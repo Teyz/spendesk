@@ -1,8 +1,5 @@
 <template>
   <section class="wrapperRoot" :id="id">
-    <h1 class="background-title" :id="size">
-      {{ title }}
-    </h1>
     <slot />
   </section>
 </template>
@@ -11,14 +8,6 @@
 export default {
   name: "Wrapper",
   props: {
-    title: {
-      type: String,
-      default: "",
-    },
-    size: {
-      type: String,
-      default: "normal",
-    },
     id: {
       type: String,
       default: "",
@@ -40,9 +29,10 @@ export default {
   margin: 32px 0;
 
   @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
     margin: 0;
+    padding-top: 72px;
   }
 }
 </style>

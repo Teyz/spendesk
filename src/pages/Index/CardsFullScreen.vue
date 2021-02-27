@@ -1,0 +1,152 @@
+<template>
+  <section class="cardsFullScreenRoot">
+    <div class="cardsFullScreenMain">
+      <div class="cardMain">
+        <h3>113,854.56€</h3>
+        <p>Available on your wallet for spending</p>
+        <a href="" class="btn">View wallet details</a>
+      </div>
+      <div class="cardList">
+        <ul>
+          <li>
+            <img src="/img/icons/icon-payment.png" alt="" />
+            <div>
+              <h4>89,606.02€</h4>
+              <p>Loaded on cards</p>
+            </div>
+          </li>
+          <li>
+            <img src="/img/icons/icon-payment.png" alt="" />
+            <div>
+              <h4>89,606.02€</h4>
+              <p>Loaded on cards</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="cardsFullScreenInfo">
+      <div class="cardMain">
+        <h4>Did you know</h4>
+        <p>You can recruit Bastien Rigaud as Web developpeur for Spendesk ?</p>
+        <a href="">Learn how</a>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "CardsFullScreen",
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.cardsFullScreenRoot {
+  margin-top: 64px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 32px !important;
+    margin-left: 72px;
+    flex-direction: row;
+
+    .cardsFullScreenMain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #e1e4ec;
+      padding: 8px;
+
+      .cardMain {
+        background-color: #f8f8f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 64px;
+
+        p {
+          color: #4c4b5d;
+        }
+      }
+
+      .cardList {
+        display: flex;
+        ul {
+          display: flex;
+          list-style: none;
+          flex-direction: column;
+
+          li {
+            display: flex !important;
+            justify-content: flex-start;
+            align-items: center;
+            width: 20vw;
+
+            &:first-child {
+              border-bottom: 1px solid #e8e8ed;
+              padding-bottom: 24px;
+            }
+
+            &:last-child {
+              padding-top: 24px;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+            }
+
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-direction: column;
+              margin-left: 16px;
+
+              p {
+                margin: 0;
+                color: #4c4b5d;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cardsFullScreenInfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f8f9;
+      border: 1px solid #e1e4ec;
+      padding: 29px;
+      margin-left: 32px;
+
+      .cardMain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 32px;
+
+        h4 {
+          color: #f3a78f;
+        }
+
+        p {
+          color: #4c4b5d;
+        }
+      }
+    }
+  }
+}
+</style>

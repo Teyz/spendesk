@@ -70,24 +70,3 @@ input[type="checkbox"]:checked + label:before {
 input[type="checkbox"]:checked + label:after {
   font-weight: bold;
 }
-
-button {
-  font-family: "Favorit Regular";
-  grid-area: link;
-  align-self: end;
-  justify-self: start;
-  z-index: 10;
-  padding: 12px;
-  border: white 1px solid;
-  color: white;
-  border-radius: 2px;
-  font-size: 18px;
-  margin-left: 16px;
-  background-color: transparent;
-  margin: 0;
-
-  &:hover {
-    background-color: white;
-    color: black;
-  }
-}

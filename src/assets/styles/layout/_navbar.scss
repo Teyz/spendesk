@@ -1,14 +1,36 @@
 #nav {
-  padding: 24px;
+  padding: 8px;
   position: absolute;
-  right: 16px;
   overflow: hidden;
   z-index: 2;
+  color: white;
+  font-family: "GTAmerica";
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   a {
+    text-decoration: none;
     display: none;
     font-weight: bold;
-    color: rgba($color: white, $alpha: 0.3);
+    color: rgba($color: white, $alpha: 0.5);
+
+    &:hover {
+      color: white;
+    }
+
+    &.active {
+      color: white !important;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
 
     &.router-link-exact-active {
       color: white;
@@ -16,15 +38,17 @@
 
     @media screen and (min-width: 1024px) {
       display: flex;
-      flex-direction: column;
-      text-align: right;
-      padding: 8px;
+      text-align: center;
+      padding: 8px 24px;
     }
   }
 
   @media screen and (min-width: 1024px) {
-    right: 6% !important;
+    left: 0% !important;
     position: fixed;
+    display: flex;
+    background-color: $main-color;
+    width: 100%;
   }
 }
 
@@ -43,7 +67,6 @@
 #nav.responsive {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   right: 0;
