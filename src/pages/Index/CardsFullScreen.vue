@@ -3,8 +3,8 @@
     <div class="cardsFullScreenMain">
       <div class="cardMain">
         <h3>113,854.56€</h3>
-        <p>Available on your wallet for spending</p>
-        <a href="" class="btn">View wallet details</a>
+        <p>Disponible sur votre compte</p>
+        <a href="" class="btn">Voir votre portefeuille</a>
       </div>
       <div class="cardList">
         <ul>
@@ -16,7 +16,7 @@
             </div>
           </li>
           <li>
-            <img src="/img/icons/icon-payment.png" alt="" />
+            <img src="/img/icons/icon-card.png" alt="" />
             <div>
               <h4>89,606.02€</h4>
               <p>Loaded on cards</p>
@@ -25,13 +25,13 @@
         </ul>
       </div>
     </div>
-    <div class="cardsFullScreenInfo">
+    <!-- <div class="cardsFullScreenInfo">
       <div class="cardMain">
-        <h4>Did you know</h4>
-        <p>You can recruit Bastien Rigaud as Web developpeur for Spendesk ?</p>
-        <a href="">Learn how</a>
+        <h4>Le saviez vous ?</h4>
+        <p>Vous pouvez recruter Bastien Rigaud en tant que développeur web.</p>
+        <a href="">En savoir plus</a>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -53,8 +53,6 @@ export default {
   position: relative;
 
   @media screen and (min-width: 1024px) {
-    margin-top: 32px !important;
-    margin-left: 72px;
     flex-direction: row;
 
     .cardsFullScreenMain {
@@ -130,6 +128,7 @@ export default {
       border: 1px solid #e1e4ec;
       padding: 29px;
       margin-left: 32px;
+      margin-right: 64px;
 
       .cardMain {
         display: flex;

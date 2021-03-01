@@ -30,9 +30,10 @@ export default {
 
   @media screen and (min-width: 1024px) {
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
     padding-top: 72px;
+    height: calc(100vh - 72px);
   }
 }
 </style>
