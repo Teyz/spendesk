@@ -86,6 +86,19 @@
                   </div>
                 </div>
               </fieldset>
+              <fieldset>
+                <div class="inputs">
+                  <div class="submit">
+                    <button class="btn btn--white" @click="showForm()">
+                      Cancel
+                    </button>
+
+                    <router-link to="/commande" class="btn btn--purple"
+                      >Confirmer ma demande</router-link
+                    >
+                  </div>
+                </div>
+              </fieldset>
             </form>
           </div>
         </div>
@@ -100,7 +113,6 @@ export default {
   name: "Form",
   setup() {
     let showAction = ref(true);
-    let formationText = ref("ECV Digital Bordeaux");
     const showForm = () => {
       event.preventDefault();
       showAction.value = !showAction.value;
@@ -108,7 +120,6 @@ export default {
     return {
       showAction,
       showForm,
-      formationText,
     };
   },
 };
@@ -224,6 +235,12 @@ export default {
                     text-align: left;
                     font-size: 14px;
                   }
+                }
+
+                .submit {
+                  display: flex;
+                  padding: 0 8px;
+                  width: 100%;
                 }
               }
             }

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '@/pages/Index.vue'
-import Contact from '@/pages/Contact.vue'
+import Commande from '@/pages/Commande.vue'
 import NotFound from '@/pages/NotFound.vue'
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: Index
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: Contact
+    path: '/commande',
+    name: 'Commande',
+    component: Commande
   },
   {
     path: "/:catchAll(.*)",

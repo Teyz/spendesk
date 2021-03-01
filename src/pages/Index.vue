@@ -1,6 +1,6 @@
 <template>
   <section class="body">
-    <Wrapper id="home">
+    <Wrapper>
       <Header />
       <CardsFullScreen />
     </Wrapper>

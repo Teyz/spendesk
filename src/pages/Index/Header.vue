@@ -8,44 +8,17 @@
         <h2>Good morning Guilhem</h2>
         <p>Vous avez des choses à faire aujourd'hui:</p>
         <div class="ctaContent">
-          <button>
+          <button class="button-arrow">
             <strong>1</strong>
             Candidature non lue
           </button>
-          <button>
+          <button class="button-arrow">
             <strong>1</strong>
             Alternant à recruter
           </button>
         </div>
       </div>
     </div>
-    <!-- <div class="cardList">
-      <ul>
-        <a href="">
-          <li>
-            <img src="/img/icons/icon-card-purple.png" alt="" />
-            <div>
-              <h4>Générer une carte virtuelle</h4>
-              <p>Pour débloquer un nouvel alternant</p>
-            </div>
-          </li>
-        </a>
-        <li>
-          <img src="/img/icons/icon-remboursement.png" alt="" />
-          <div>
-            <h4>Demander un remboursement</h4>
-            <p>Pour être remboursé</p>
-          </div>
-        </li>
-        <li>
-          <img src="/img/icons/icon-facture.png" alt="" />
-          <div>
-            <h4>Soumettre une facture</h4>
-            <p>Pour payer un fournisseur</p>
-          </div>
-        </li>
-      </ul>
-    </div> -->
   </section>
 </template>
 

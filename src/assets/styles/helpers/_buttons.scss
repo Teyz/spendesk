@@ -1,4 +1,45 @@
-button {
+.btn {
+  background-color: #fff;
+  border: 1px solid #d8d8e1;
+  border-radius: 5px;
+  color: #505065;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+
+  &.btn--download {
+    color: black !important;
+    margin-right: 32px;
+  }
+
+  &.btn--purple {
+    background-color: #2c2067;
+    color: white;
+    padding: 12px 24px;
+    width: 100%;
+
+    &:hover {
+      background-color: transparent;
+      color: #2c2067;
+      border: 1px solid #2c2067;
+    }
+  }
+
+  &.btn--white {
+    background-color: transparent;
+    color: #505065;
+    padding: 12px 24px;
+    margin-right: 24px;
+
+    &:hover {
+      background-color: #2c2067;
+      color: white;
+    }
+  }
+}
+
+.button-arrow {
   background-color: #e6ecf2;
   border-radius: 5px;
   border: none;
@@ -17,20 +58,5 @@ button {
     transform: translateY(-50%);
     background-image: url(/img/icons/chevron.svg);
     background-repeat: no-repeat;
-  }
-}
-
-.btn {
-  background-color: #fff;
-  border: 1px solid #d8d8e1;
-  border-radius: 5px;
-  color: #505065;
-  padding: 8px 16px;
-  font-weight: 600;
-  text-decoration: none;
-
-  &.btn--download {
-    color: black !important;
-    margin-right: 32px;
   }
 }

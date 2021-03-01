@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapperRoot" :id="id">
+  <section class="wrapperRoot">
     <slot />
   </section>
 </template>
@@ -7,12 +7,6 @@
 <script>
 export default {
   name: "Wrapper",
-  props: {
-    id: {
-      type: String,
-      default: "",
-    },
-  },
 };
 </script>
 
