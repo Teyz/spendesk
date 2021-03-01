@@ -47,9 +47,11 @@
 <script>
 import { ref } from "vue";
 import emailjs from "emailjs-com";
+import { useToast } from "vue-toastification";
 export default {
   name: "OrderReview",
   setup() {
+    const toast = useToast();
     let email = ref("");
     const sendEmail = (e) => {
       console.log(email.value);
@@ -66,15 +68,14 @@ export default {
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
-            this.$toast.success("Email envoyé !", {
+            toast("Email envoyé !", {
+              toastClassName: "spendesk",
               position: "top-right",
             });
-            this.resetForm();
           },
           (error) => {
             console.log("FAILED...", error);
-            this.resetForm();
-            this.$toast.error("Une erreur est survenue", {
+            toast.error("Une erreur est survenue", {
               position: "top-right",
             });
           }
