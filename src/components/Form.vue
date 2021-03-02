@@ -81,7 +81,8 @@
                       name="message"
                       rows="5"
                       cols="33"
-                      placeholder="Du blablabla habituel"
+                      placeholder="Du blablabla habituel BUT ce texte sera utilisé lors de l'envoie de l'email à la prochaine étape."
+                      v-model="message"
                     ></textarea>
                   </div>
                 </div>
@@ -93,9 +94,13 @@
                       Cancel
                     </button>
 
-                    <router-link to="/commande" class="btn btn--purple"
-                      >Confirmer ma demande</router-link
+                    <button
+                      to="/commande"
+                      @click="saveForm()"
+                      class="btn btn--purple"
                     >
+                      Confirmer ma demande
+                    </button>
                   </div>
                 </div>
               </fieldset>
@@ -109,17 +114,27 @@
 
 <script>
 import { ref } from "vue";
+import store from "../store/store";
+import router from "@/router";
 export default {
   name: "Form",
   setup() {
+    let message = ref("");
     let showAction = ref(true);
     const showForm = () => {
       event.preventDefault();
       showAction.value = !showAction.value;
     };
+    const saveForm = () => {
+      event.preventDefault();
+      store.state.message = message.value;
+      router.push({ name: "Commande" });
+    };
     return {
+      message,
       showAction,
       showForm,
+      saveForm,
     };
   },
 };

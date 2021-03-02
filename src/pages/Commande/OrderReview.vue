@@ -48,13 +48,16 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import { useToast } from "vue-toastification";
+import store from "../../store/store";
+import router from "@/router";
 export default {
   name: "OrderReview",
   setup() {
+    const data = store.state.message;
     const toast = useToast();
     let email = ref("");
     const sendEmail = (e) => {
-      console.log(email.value);
+      console.log(data);
       emailjs
         .sendForm(
           "service_3myt38i",
@@ -63,6 +66,7 @@ export default {
           "user_UCQM7Dx1nsQped1PwUprh",
           {
             email: email.value,
+            msg: data,
           }
         )
         .then(
@@ -84,6 +88,7 @@ export default {
     return {
       email,
       sendEmail,
+      data,
     };
   },
 };
