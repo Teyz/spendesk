@@ -1,5 +1,5 @@
 #nav {
-  padding: 8px;
+  padding: 12px;
   position: absolute;
   overflow: hidden;
   z-index: 2;
@@ -9,8 +9,16 @@
   letter-spacing: 1.7px;
   font-size: 12px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  background-color: $main-color;
+  width: 100%;
+  top: 0;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
 
   a {
     text-decoration: none;
@@ -59,6 +67,11 @@
     text-align: right;
   }
 }
+
+#nav .profile > a {
+  display: flex !important;
+}
+
 #nav a.icon {
   float: right;
   display: flex;
@@ -70,6 +83,11 @@
   justify-content: center;
   align-items: center;
   right: 0;
+  width: auto;
+
+  .profile {
+    display: none;
+  }
 }
 
 #nav.responsive a {

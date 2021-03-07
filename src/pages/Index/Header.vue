@@ -38,6 +38,15 @@ export default {
   flex-direction: column;
   position: relative;
 
+  .headerMain {
+    margin-top: 48px;
+    .headerImage {
+      img {
+        width: 150px;
+      }
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     flex-direction: row;
 

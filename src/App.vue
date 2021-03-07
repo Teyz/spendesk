@@ -27,6 +27,19 @@
 <script>
 export default {
   name: "App",
+  setup() {
+    const showMenu = () => {
+      let x = document.getElementById("nav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    };
+    return {
+      showMenu,
+    };
+  },
 };
 </script>
 
@@ -37,25 +50,34 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 
-  .topnav {
+  .profile {
+    margin-right: 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .navbar {
+  @media screen and (min-width: 1024px) {
+    .topnav {
       display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      justify-content: space-between;
 
-    .profile {
-      margin-right: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-      img {
-        width: 50px;
-        height: 50px;
+      .profile {
+        margin-right: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
   }

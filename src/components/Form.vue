@@ -150,7 +150,121 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 32px 0;
+  margin: 32px 0 0 0;
+
+  .sliderContainer {
+    .cardList {
+      display: flex;
+      background-color: white;
+      width: auto;
+      ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+
+        li {
+          width: auto;
+        }
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        li {
+          display: flex !important;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 24px;
+          border-bottom: 1px solid rgba(#4c4b5d, 0.2);
+          width: auto;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-left: 16px;
+
+            h4 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 16px;
+              text-align: left;
+              margin: 0;
+              color: #4c4b5d;
+            }
+          }
+        }
+      }
+    }
+
+    .formContainer {
+      .formHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(#4c4b5d, 0.5);
+        padding: 24px;
+
+        h3 {
+          font-size: 20px;
+          color: rgba(#4c4b5d, 0.8);
+          text-align: left;
+        }
+      }
+      .formContent {
+        form {
+          margin: 0;
+
+          fieldset {
+            border: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 16px;
+
+            .inputs {
+              display: flex;
+              width: 100%;
+
+              .input {
+                display: flex;
+                flex-direction: column;
+                padding: 0 8px;
+                width: 100%;
+
+                .error {
+                  color: red;
+                  text-align: left;
+                  font-size: 14px;
+                }
+              }
+
+              .submit {
+                display: flex;
+                padding: 0 8px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   @media screen and (min-width: 1024px) {
     margin: 0;

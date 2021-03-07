@@ -44,7 +44,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .cardsFullScreenRoot {
-  margin-top: 64px;
   padding: 24px;
   display: flex;
   align-items: center;
@@ -52,8 +51,55 @@ export default {
   flex-direction: column;
   position: relative;
 
+  .cardList {
+    display: flex;
+    margin-top: 32px;
+    ul {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: flex !important;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20vw;
+
+        &:first-child {
+          border-bottom: 1px solid #e8e8ed;
+          padding-bottom: 24px;
+        }
+
+        &:last-child {
+          padding-top: 24px;
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          margin-left: 16px;
+
+          p {
+            margin: 0;
+            color: #4c4b5d;
+          }
+        }
+      }
+    }
+  }
   @media screen and (min-width: 1024px) {
     flex-direction: row;
+    margin-top: 64px;
 
     .cardsFullScreenMain {
       display: flex;
@@ -73,49 +119,6 @@ export default {
 
         p {
           color: #4c4b5d;
-        }
-      }
-
-      .cardList {
-        display: flex;
-        ul {
-          display: flex;
-          list-style: none;
-          flex-direction: column;
-
-          li {
-            display: flex !important;
-            justify-content: flex-start;
-            align-items: center;
-            width: 20vw;
-
-            &:first-child {
-              border-bottom: 1px solid #e8e8ed;
-              padding-bottom: 24px;
-            }
-
-            &:last-child {
-              padding-top: 24px;
-            }
-
-            img {
-              width: 50px;
-              height: 50px;
-            }
-
-            div {
-              display: flex;
-              justify-content: center;
-              align-items: flex-start;
-              flex-direction: column;
-              margin-left: 16px;
-
-              p {
-                margin: 0;
-                color: #4c4b5d;
-              }
-            }
-          }
         }
       }
     }

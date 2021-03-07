@@ -22,6 +22,10 @@ export default {
 <style scoped lang="scss">
 .body {
   position: relative;
-  width: calc(100vw - 450px);
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    width: calc(100vw - 450px);
+  }
 }
 </style>
