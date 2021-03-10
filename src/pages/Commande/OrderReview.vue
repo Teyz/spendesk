@@ -33,6 +33,19 @@
               />
             </div>
           </fieldset>
+          <fieldset>
+            <div class="input">
+              <label for="message">Votre message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                cols="33"
+                placeholder="Du blablabla habituel BUT ce texte sera utilisé lors de l'envoie de l'email à la prochaine étape."
+                v-model="message"
+              ></textarea>
+            </div>
+          </fieldset>
         </div>
         <div class="orderReviewFooter">
           <button class="btn btn--purple">
@@ -53,29 +66,29 @@ import router from "@/router";
 export default {
   name: "OrderReview",
   setup() {
-    const data = store.state.message;
     const toast = useToast();
-    let email = ref("");
+    const email = ref("");
+    const message = store.state.message;
     const sendEmail = (e) => {
-      console.log(data);
       emailjs
         .sendForm(
-          "service_3myt38i",
-          "template_d90dfhj",
+          "spendesk",
+          "template_f3b7iq7",
           e.target,
-          "user_UCQM7Dx1nsQped1PwUprh",
+          "user_tcs5iwe4k2fIRxH8ZaI4J",
           {
+            message: message.value,
             email: email.value,
-            msg: data,
           }
         )
         .then(
           (result) => {
-            console.log("SUCCESS!", result.status, result.text);
+            console.log("SUCCESS!", result);
             toast("Email envoyé !", {
               toastClassName: "spendesk",
               position: "top-right",
             });
+            router.push({ name: "Index" });
           },
           (error) => {
             console.log("FAILED...", error);
@@ -87,8 +100,8 @@ export default {
     };
     return {
       email,
+      message,
       sendEmail,
-      data,
     };
   },
 };
@@ -101,6 +114,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    height: auto;
+  }
   .container {
     background-color: #fff;
     padding: 32px;
