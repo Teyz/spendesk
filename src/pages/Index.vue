@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import Header from "./Index/Header";
-import CardsFullScreen from "./Index/CardsFullScreen";
-import Form from "../components/Form";
+import Header from "@/modules/Index/Header";
+import CardsFullScreen from "@/modules/Index/CardsFullScreen";
+import Form from "@/components/Form";
 export default {
   name: "Index",
   components: { Header, CardsFullScreen, Form },

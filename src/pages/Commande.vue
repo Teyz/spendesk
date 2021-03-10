@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import OrderReview from "./Commande/OrderReview";
+import OrderReview from "@/modules/Commande/OrderReview";
 export default {
   name: "Commande",
   components: {
