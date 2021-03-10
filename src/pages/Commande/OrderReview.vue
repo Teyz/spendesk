@@ -97,10 +97,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .orderReviewRoot {
+  height: calc(100vh - 92px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
     background-color: #fff;
     padding: 32px;
     border: 1px solid rgba($text-color, 0.2);
+    width: 80vw;
 
     .orderReviewHeader {
       border-bottom: 1px solid rgba($text-color, 0.2);
@@ -122,7 +127,7 @@ export default {
 
       .orderReviewCard {
         margin-top: 16px;
-        padding: 32px;
+        padding: 16px;
         border: 1px solid rgba($text-color, 0.2);
         display: flex;
         justify-content: space-between;
@@ -135,7 +140,7 @@ export default {
           align-items: flex-start;
         }
         img {
-          width: 150px;
+          width: 50px;
         }
       }
       fieldset {

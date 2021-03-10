@@ -54,6 +54,9 @@ export default {
   .cardList {
     display: flex;
     margin-top: 32px;
+    @media screen and (min-width: 1024px) {
+      margin-top: 0;
+    }
     ul {
       display: flex;
       list-style: none;
@@ -67,6 +70,9 @@ export default {
         justify-content: flex-start;
         align-items: center;
         width: 20vw;
+        @media screen and (min-width: 1024px) {
+          padding-left: 24px;
+        }
 
         &:first-child {
           border-bottom: 1px solid #e8e8ed;

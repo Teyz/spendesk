@@ -20,14 +20,14 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 32px 0;
+  margin: 80px 0 0 0;
 
   @media screen and (min-width: 1024px) {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding-top: 72px;
-    height: calc(100vh - 72px);
+    margin-top: 72px;
+    height: calc(100vh - 92px);
   }
 }
 </style>

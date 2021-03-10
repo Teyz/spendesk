@@ -1,20 +1,15 @@
 <template>
   <div id="nav" class="topnav">
     <div class="navbar">
-      <a class="nav-item" href="/#home">
+      <a class="nav-item" href="/">
         <img src="/img/logo.png" alt="" />
       </a>
-      <a class="nav-item active" href="/#home">Request</a>
-      <a class="nav-item" href="/#aboutme">Payments</a>
-      <a class="nav-item" href="/#portfolio">Subscriptions</a>
-      <a class="nav-item" href="/#experiences">Cards</a>
-      <a class="nav-item" href="/#contact">Invoices</a>
-      <a class="nav-item" href="/#contact">Settings</a>
-      <svg viewBox="0 0 100 80" width="40" height="40" v-on:click="showMenu()">
-        <rect width="100" height="10" rx="4" fill="white"></rect>
-        <rect y="30" width="100" height="10" rx="4" fill="white"></rect>
-        <rect y="60" width="100" height="10" rx="4" fill="white"></rect>
-      </svg>
+      <p class="nav-item active" href="/#">Request</p>
+      <p class="nav-item" href="/#">Payments</p>
+      <p class="nav-item" href="/#">Subscriptions</p>
+      <p class="nav-item" href="/#">Cards</p>
+      <p class="nav-item" href="/#">Invoices</p>
+      <p class="nav-item" href="/#">Settings</p>
     </div>
     <div class="profile">
       <a href="" class="btn btn--download">Visit my CV</a>
@@ -27,19 +22,6 @@
 <script>
 export default {
   name: "App",
-  setup() {
-    const showMenu = () => {
-      let x = document.getElementById("nav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    };
-    return {
-      showMenu,
-    };
-  },
 };
 </script>
 
@@ -66,6 +48,16 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .nav-item {
+          color: #9f9faf;
+          padding: 8px 24px;
+          font-weight: 800;
+
+          &.active {
+            color: white;
+          }
+        }
       }
 
       .profile {

@@ -151,6 +151,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   margin: 32px 0 0 0;
+  background-color: #fff;
 
   .sliderContainer {
     .cardList {
@@ -268,11 +269,11 @@ export default {
 
   @media screen and (min-width: 1024px) {
     margin: 0;
-    height: 693px;
+    height: calc(100vh - 92px);
     width: 450px;
     background-color: #fff;
     position: absolute;
-    top: 72px;
+    top: 92px;
     right: 0;
 
     .sliderContainer {
@@ -285,6 +286,7 @@ export default {
           flex-direction: column;
           padding: 0;
           margin: 0;
+          width: 100%;
 
           a {
             text-decoration: none;
