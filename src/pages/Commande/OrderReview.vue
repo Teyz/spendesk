@@ -107,6 +107,10 @@ export default {
     border: 1px solid rgba($text-color, 0.2);
     width: 80vw;
 
+    @media screen and (min-width: 1024px) {
+      width: auto;
+    }
+
     .orderReviewHeader {
       border-bottom: 1px solid rgba($text-color, 0.2);
       h1 {
@@ -133,6 +137,10 @@ export default {
         justify-content: space-between;
         align-items: flex-start;
 
+        @media screen and (min-width: 1024px) {
+          padding: 32px;
+        }
+
         .cardContent {
           display: flex;
           flex-direction: column;
@@ -141,6 +149,10 @@ export default {
         }
         img {
           width: 50px;
+
+          @media screen and (min-width: 1024px) {
+            width: 150px;
+          }
         }
       }
       fieldset {

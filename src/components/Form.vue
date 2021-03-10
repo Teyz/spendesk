@@ -40,7 +40,11 @@
                 <div class="inputs">
                   <div class="input">
                     <label for="alternance">Type d'alternance</label>
-                    <input name="alternance" type="text" placeholder="8000€" />
+                    <input
+                      name="alternance"
+                      type="text"
+                      placeholder="Contrat de professionnalisation"
+                    />
                   </div>
                 </div>
               </fieldset>

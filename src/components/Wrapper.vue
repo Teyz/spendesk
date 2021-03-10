@@ -26,7 +26,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 0;
-    margin-top: 72px;
+    margin-top: 92px;
     height: calc(100vh - 92px);
   }
 }
