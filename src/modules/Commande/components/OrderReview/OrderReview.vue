@@ -61,7 +61,7 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import { useToast } from "vue-toastification";
-import store from "../../store/store";
+import store from "@/store/store";
 import router from "@/router";
 export default {
   name: "OrderReview",
@@ -88,7 +88,7 @@ export default {
               toastClassName: "spendesk",
               position: "top-right",
             });
-            router.push({ name: "Index" });
+            router.push({ name: "Home" });
           },
           (error) => {
             console.log("FAILED...", error);

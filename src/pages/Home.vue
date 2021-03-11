@@ -1,14 +1,12 @@
 <template>
-  <CommandeModule />
+  <HomeModule />
 </template>
 
 <script>
-import CommandeModule from "@/modules/Commande";
+import HomeModule from "@/modules/Home";
 export default {
-  name: "Commande",
-  components: {
-    CommandeModule,
-  },
+  name: "Home",
+  components: { HomeModule },
 };
 </script>
 

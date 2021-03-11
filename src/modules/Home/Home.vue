@@ -9,11 +9,10 @@
 </template>
 
 <script>
-import Header from "@/modules/Index/Header";
-import CardsFullScreen from "@/modules/Index/CardsFullScreen";
+import { Header, CardsFullScreen } from "./components";
 import Form from "@/components/Form";
 export default {
-  name: "Index",
+  name: "Home",
   components: { Header, CardsFullScreen, Form },
 };
 </script>

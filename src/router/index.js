@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from '@/pages/Index.vue'
+import Home from '@/pages/Home.vue'
 import Commande from '@/pages/Commande.vue'
 import NotFound from '@/pages/NotFound.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Index',
-    component: Index
+    name: 'Home',
+    component: Home
   },
   {
     path: '/commande',
