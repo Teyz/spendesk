@@ -20,7 +20,7 @@ or
 Run the app :
 `yarn serve`
 
-## Frameworks
+## Framework
 
 - Vue 3
 
