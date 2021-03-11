@@ -1,19 +1,30 @@
-# vue-cv
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 
-## Project setup
-```
-yarn install
-```
+# Spendesk - Application [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+> Names of contributors
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- Bastien Rigaud ([profile](https://github.com/Teyz))
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## How to install the project
+
+Install dependencies :
+`yarn`
+or
+`npm i`
+
+Run the app :
+`yarn serve`
+
+## Tools
+
+- Vue 3
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](contributing.md) first.
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
