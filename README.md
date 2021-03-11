@@ -6,6 +6,8 @@
 
 - Bastien Rigaud ([profile](https://github.com/Teyz))
 
+## Wı
+
 ## How to install the project
 
 Install dependencies :
