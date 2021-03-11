@@ -6,7 +6,9 @@
 
 - Bastien Rigaud ([profile](https://github.com/Teyz))
 
-## Wı
+## What is the purpose of this project
+
+The goal of this project is to create an original application using the product set up by Spendesk.
 
 ## How to install the project
 
@@ -18,9 +20,14 @@ or
 Run the app :
 `yarn serve`
 
-## Tools
+## Frameworks
 
 - Vue 3
+
+## Tools
+
+- Figma
+- VSCode
 
 ## License
 
