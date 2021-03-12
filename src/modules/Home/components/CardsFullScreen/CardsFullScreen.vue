@@ -95,9 +95,14 @@ export default {
           flex-direction: column;
           margin-left: 16px;
 
+          h4 {
+            font-size: 18px;
+          }
+
           p {
             margin: 0;
             color: #4c4b5d;
+            font-size: 16px;
           }
         }
       }
@@ -105,7 +110,7 @@ export default {
   }
   @media screen and (min-width: 1024px) {
     flex-direction: row;
-    margin-top: 64px;
+    margin-top: 24px;
 
     .cardsFullScreenMain {
       display: flex;
@@ -125,6 +130,11 @@ export default {
 
         p {
           color: #4c4b5d;
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 16px;
         }
       }
     }

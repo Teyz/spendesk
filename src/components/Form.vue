@@ -40,11 +40,39 @@
                 <div class="inputs">
                   <div class="input">
                     <label for="alternance">Type d'alternance</label>
-                    <input
-                      name="alternance"
-                      type="text"
-                      placeholder="Contrat de professionnalisation"
-                    />
+                    <div class="radio-list">
+                      <div class="radio-container">
+                        <input
+                          class="radio-select"
+                          type="radio"
+                          name="radio"
+                          value="hour"
+                          checked
+                        />
+                        <div class="icon-container">
+                          <span>Contrat de professionnalisation</span>
+                          <p>
+                            Sur un rythme de 4 jours en entreprise et 1 jour en
+                            formation.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="radio-container">
+                        <input
+                          class="radio-select"
+                          type="radio"
+                          name="radio"
+                          value="ship"
+                          disabled
+                        />
+                        <div class="icon-container">
+                          <span>Contrat d'apprentissag</span>
+                          <p>
+                            Ce contrat est indisponible actuellement.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -78,21 +106,6 @@
               </fieldset>
               <fieldset>
                 <div class="inputs">
-                  <div class="input">
-                    <label for="message">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="5"
-                      cols="33"
-                      placeholder="Du blablabla habituel BUT ce texte sera utilisé lors de l'envoie de l'email à la prochaine étape."
-                      v-model="message"
-                    ></textarea>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset>
-                <div class="inputs">
                   <div class="submit">
                     <button class="btn btn--white" @click="showForm()">
                       Cancel
@@ -118,12 +131,10 @@
 
 <script>
 import { ref } from "vue";
-import store from "../store/store";
 import router from "@/router";
 export default {
   name: "Form",
   setup() {
-    let message = ref("");
     let showAction = ref(true);
     const showForm = () => {
       event.preventDefault();
@@ -131,11 +142,9 @@ export default {
     };
     const saveForm = () => {
       event.preventDefault();
-      store.state.message = message.value;
       router.push({ name: "Commande" });
     };
     return {
-      message,
       showAction,
       showForm,
       saveForm,
@@ -206,7 +215,7 @@ export default {
             }
 
             p {
-              font-size: 16px;
+              font-size: 14px;
               text-align: left;
               margin: 0;
               color: #4c4b5d;
@@ -273,11 +282,11 @@ export default {
 
   @media screen and (min-width: 1024px) {
     margin: 0;
-    height: calc(100vh - 92px);
+    height: calc(100vh - 70px);
     width: 450px;
     background-color: #fff;
     position: absolute;
-    top: 92px;
+    top: 70px;
     right: 0;
 
     .sliderContainer {
@@ -382,6 +391,61 @@ export default {
           }
         }
       }
+    }
+  }
+}
+$white: #ffffff;
+$bg: #6ebdf9;
+.radio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.radio-container {
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+
+  & .icon-container {
+    padding: 24px;
+    border: 1px $bg solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  & span {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  & p {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  & .radio-select {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+    $trans: all 0.3s ease-in-out;
+    &:checked + .icon-container {
+      background-color: #f0f9fe;
+    }
+
+    &:disabled + .icon-container {
+      background-color: #f1f1f4;
+      border: 1px solid #a3a3b5;
     }
   }
 }

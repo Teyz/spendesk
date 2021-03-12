@@ -47,6 +47,12 @@ export default {
     }
   }
 
+  .headerContent {
+    p {
+      color: #7e7e8f;
+    }
+  }
+
   @media screen and (min-width: 1024px) {
     flex-direction: row;
 
