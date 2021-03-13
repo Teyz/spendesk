@@ -50,7 +50,13 @@
                           checked
                         />
                         <div class="icon-container">
-                          <span>Contrat de professionnalisation</span>
+                          <div class="icon-container-header">
+                            <img
+                              src="/img/icons/icon-payment-blue.png"
+                              alt=""
+                            />
+                            <span>Contrat de professionnalisation</span>
+                          </div>
                           <p>
                             Sur un rythme de 4 jours en entreprise et 1 jour en
                             formation.
@@ -66,7 +72,10 @@
                           disabled
                         />
                         <div class="icon-container">
-                          <span>Contrat d'apprentissag</span>
+                          <div class="icon-container-header">
+                            <img src="/img/icons/icon-reload.png" alt="" />
+                            <span>Contrat d'apprentissage</span>
+                          </div>
                           <p>
                             Ce contrat est indisponible actuellement.
                           </p>
@@ -79,12 +88,12 @@
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="price">Coup de la formation</label>
+                    <label for="price">Cadre de la formation</label>
                     <input
                       name="price"
                       type="text"
                       disabled
-                      placeholder="8000€"
+                      placeholder="Mastère Développement web"
                     />
                   </div>
                 </div>
@@ -92,14 +101,27 @@
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="formation">Lieu de la formation</label>
+                    <label for="formation">Fournisseur</label>
                     <select>
-                      <option value="" selected disabled hidden
-                        >ECV Digital Bordeaux</option
-                      >
+                      <option value="0" selected disabled hidden>
+                        ECV Digital Bordeaux
+                      </option>
                       <option value="1" disabled
                         >Hop hop doucement ! Je compte rester à l'ECV.</option
                       >
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="inputs">
+                  <div class="input">
+                    <label for="formation">Code analytiques</label>
+                    <select>
+                      <option value="" selected disabled hidden
+                        >Rencontre avec un candidat</option
+                      >
+                      <option value="1" disabled>Prendre un café</option>
                     </select>
                   </div>
                 </div>
@@ -374,6 +396,15 @@ export default {
                   padding: 0 8px;
                   width: 100%;
 
+                  option[value="0"]:before {
+                    background-image: url(/img/ecv.png);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100px;
+                    height: 20px;
+                  }
+
                   .error {
                     color: red;
                     text-align: left;
@@ -398,25 +429,36 @@ $white: #ffffff;
 $bg: #6ebdf9;
 .radio-list {
   display: flex;
-  flex-wrap: wrap;
 }
 .radio-container {
-  margin: 5px;
-  padding: 5px;
+  &:first-child {
+    margin-right: 12px;
+  }
   position: relative;
 
   & .icon-container {
-    padding: 24px;
+    padding: 16px;
     border: 1px $bg solid;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100px;
+
+    .icon-container-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 30px;
+      }
+    }
   }
 
   & span {
-    margin-top: 15px;
+    margin-left: 8px;
     font-size: 14px;
     text-align: left;
   }
