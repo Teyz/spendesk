@@ -12,7 +12,7 @@
       <p class="nav-item" href="/#">Settings</p>
     </div>
     <div class="profile">
-      <a href="" class="btn btn--download">Visit my CV</a>
+      <a href="cv.bastienrigaud.fr" class="btn btn--download">Visit my CV</a>
       <img src="/img/icons/pp.jpg" alt="" />
     </div>
   </div>
@@ -67,8 +67,8 @@ export default {
         align-items: center;
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 30px;
+          height: 30px;
         }
       }
     }

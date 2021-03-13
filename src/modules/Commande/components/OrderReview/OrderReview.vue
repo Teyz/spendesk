@@ -68,7 +68,7 @@ export default {
   setup() {
     const toast = useToast();
     const email = ref("");
-    const message = store.state.message;
+    const message = ref("");
     const sendEmail = (e) => {
       emailjs
         .sendForm(
