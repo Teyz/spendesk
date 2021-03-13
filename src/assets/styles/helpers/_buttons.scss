@@ -18,15 +18,13 @@
   }
 
   &.btn--purple {
-    background-color: #2c2067;
+    background-color: #5d21d2;
     color: white;
     padding: 12px 24px;
     width: 100%;
 
     &:hover {
-      background-color: transparent;
-      color: #2c2067;
-      border: 1px solid #2c2067;
+      background-color: #4923a3;
     }
   }
 
@@ -37,8 +35,7 @@
     margin-right: 24px;
 
     &:hover {
-      background-color: #2c2067;
-      color: white;
+      border-color: #a3a3b5;
     }
   }
 }

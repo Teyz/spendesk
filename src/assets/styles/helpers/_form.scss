@@ -1,7 +1,7 @@
 input,
 select,
 textarea {
-  font-family: "GTAmerica";
+  font-family: "GTAmerica" !important;
   border: 1px solid #c0c0c8;
   color: #434159;
   border-radius: 8px;
@@ -13,6 +13,9 @@ textarea {
     border: 1px solid #5d21d2 !important;
     outline: none;
   }
+}
+textarea {
+  padding-top: 15px;
 }
 
 label {
