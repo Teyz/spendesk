@@ -101,15 +101,17 @@
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="formation">Fournisseur</label>
-                    <select>
-                      <option value="0" selected disabled hidden>
-                        ECV Digital Bordeaux
-                      </option>
-                      <option value="1" disabled
-                        >Hop hop doucement ! Je compte rester à l'ECV.</option
-                      >
-                    </select>
+                    <label for="fournisseur">Fournisseur</label>
+                    <div class="input-container">
+                      <input
+                        name="fournisseur"
+                        type="text"
+                        disabled
+                        placeholder="ECV Digital Bordeaux"
+                        class="fournisseurInput"
+                      />
+                      <img src="/img/ecv-black.svg" class="input_img" />
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -138,7 +140,7 @@
                       @click="saveForm()"
                       class="btn btn--purple"
                     >
-                      Confirmer ma demande
+                      Confirmer
                     </button>
                   </div>
                 </div>
@@ -166,6 +168,7 @@ export default {
       event.preventDefault();
       router.push({ name: "Commande" });
     };
+
     return {
       showAction,
       showForm,
@@ -305,7 +308,8 @@ export default {
   @media screen and (min-width: 1024px) {
     margin: 0;
     height: calc(100vh - 70px);
-    width: 450px;
+    overflow-y: scroll;
+    width: 370px;
     background-color: #fff;
     position: absolute;
     top: 70px;
@@ -384,7 +388,7 @@ export default {
               flex-direction: column;
               justify-content: center;
               align-items: flex-start;
-              margin-top: 16px;
+              margin-top: 10px;
 
               .inputs {
                 display: flex;
@@ -396,13 +400,23 @@ export default {
                   padding: 0 8px;
                   width: 100%;
 
-                  option[value="0"]:before {
-                    background-image: url(/img/ecv.png);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100px;
-                    height: 20px;
+                  .input-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    input {
+                      padding-left: 48px;
+                    }
+                    .input_img {
+                      position: absolute;
+                      top: 50%;
+                      left: 12px;
+                      transform: translateY(-50%);
+                      width: 32px;
+                      height: 32px;
+                    }
                   }
 
                   .error {
@@ -429,30 +443,33 @@ $white: #ffffff;
 $bg: #6ebdf9;
 .radio-list {
   display: flex;
+  flex-wrap: wrap;
 }
 .radio-container {
   &:first-child {
-    margin-right: 12px;
+    margin-bottom: 16px;
   }
   position: relative;
+  width: 100%;
 
   & .icon-container {
     padding: 16px;
     border: 1px $bg solid;
     border-radius: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    height: 100px;
 
     .icon-container-header {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 4px;
 
       img {
-        width: 30px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
@@ -461,11 +478,15 @@ $bg: #6ebdf9;
     margin-left: 8px;
     font-size: 14px;
     text-align: left;
+    font-weight: 800;
   }
 
   & p {
     font-size: 12px;
     text-align: left;
+    margin: 0;
+    line-height: 16px;
+    color: #9090a3;
   }
 
   & .radio-select {
@@ -486,8 +507,12 @@ $bg: #6ebdf9;
     }
 
     &:disabled + .icon-container {
-      background-color: #f1f1f4;
-      border: 1px solid #a3a3b5;
+      background-color: #fafafa;
+      border: 1px solid #c0c0c7;
+
+      span {
+        color: #908f9e;
+      }
     }
   }
 }

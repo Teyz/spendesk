@@ -12,7 +12,9 @@
       <p class="nav-item" href="/#">Settings</p>
     </div>
     <div class="profile">
-      <a href="cv.bastienrigaud.fr" class="btn btn--download">Visit my CV</a>
+      <a href="https://cv.bastienrigaud.fr" class="btn btn--download"
+        >Visit my CV</a
+      >
       <img src="/img/icons/pp.jpg" alt="" />
     </div>
   </div>

@@ -25,7 +25,7 @@ export default {
   @media screen and (min-width: 1024px) {
     justify-content: center;
     align-items: center;
-    margin: 124px 0 32px 0;
+    margin: 100px 0 32px 0;
   }
 }
 </style>
