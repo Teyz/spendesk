@@ -12,14 +12,14 @@
             <img src="/img/icons/icon-payment.png" alt="" />
             <div>
               <h4>89,606.02€</h4>
-              <p>Loaded on cards</p>
+              <p>Chargé sur la carte</p>
             </div>
           </li>
           <li>
             <img src="/img/icons/icon-card.png" alt="" />
             <div>
               <h4>89,606.02€</h4>
-              <p>Loaded on cards</p>
+              <p>Transaction en attente</p>
             </div>
           </li>
         </ul>
@@ -64,14 +64,16 @@ export default {
       margin: 0;
       padding: 0;
       list-style: none;
+      width: 100%;
 
       li {
         display: flex !important;
         justify-content: flex-start;
         align-items: center;
-        width: 20vw;
+        width: 100%;
         @media screen and (min-width: 1024px) {
           padding-left: 24px;
+          width: 20vw;
         }
 
         &:first-child {

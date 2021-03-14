@@ -280,6 +280,25 @@ export default {
               display: flex;
               width: 100%;
 
+              .input-container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                  padding-left: 48px;
+                }
+                .input_img {
+                  position: absolute;
+                  top: 50%;
+                  left: 12px;
+                  transform: translateY(-50%);
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+
               .input {
                 display: flex;
                 flex-direction: column;
