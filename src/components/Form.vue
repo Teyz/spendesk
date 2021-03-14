@@ -132,7 +132,7 @@
                 <div class="inputs">
                   <div class="submit">
                     <button class="btn btn--white" @click="showForm()">
-                      Cancel
+                      Annuler
                     </button>
 
                     <button
@@ -224,8 +224,8 @@ export default {
           width: auto;
 
           img {
-            width: 50px;
-            height: 50px;
+            width: 32px;
+            height: 32px;
           }
 
           div {
@@ -363,8 +363,8 @@ export default {
             width: 100%;
 
             img {
-              width: 50px;
-              height: 50px;
+              width: 32px;
+              height: 32px;
             }
 
             div {
