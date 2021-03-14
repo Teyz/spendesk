@@ -39,7 +39,7 @@
                 name="message"
                 rows="5"
                 cols="33"
-                placeholder="Du blablabla habituel BUT ce texte sera utilisé lors de l'envoie de l'email à la prochaine étape."
+                placeholder="Me dire par exemple que vous voulez me recruter ;)"
                 v-model="message"
               ></textarea>
             </div>
