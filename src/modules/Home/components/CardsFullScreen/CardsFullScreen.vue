@@ -12,26 +12,19 @@
             <img src="/img/icons/icon-payment.png" alt="" />
             <div>
               <h4>89,606.02€</h4>
-              <p>Chargé sur la carte</p>
+              <p>Chargés sur la carte</p>
             </div>
           </li>
           <li>
             <img src="/img/icons/icon-card.png" alt="" />
             <div>
-              <h4>89,606.02€</h4>
+              <h4>8,603.06€</h4>
               <p>Transaction en attente</p>
             </div>
           </li>
         </ul>
       </div>
     </div>
-    <!-- <div class="cardsFullScreenInfo">
-      <div class="cardMain">
-        <h4>Le saviez vous ?</h4>
-        <p>Vous pouvez recruter Bastien Rigaud en tant que développeur web.</p>
-        <a href="">En savoir plus</a>
-      </div>
-    </div> -->
   </section>
 </template>
 

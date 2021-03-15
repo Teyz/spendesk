@@ -4,15 +4,18 @@
       <a class="nav-item" href="/">
         <img src="/img/logo.png" alt="" />
       </a>
-      <p class="nav-item active" href="/#">Requête</p>
+      <p class="nav-item active" href="/#">Requêtes</p>
       <p class="nav-item" href="/#">Paiements</p>
-      <p class="nav-item" href="/#">Souscripions</p>
+      <p class="nav-item" href="/#">Abonnements</p>
       <p class="nav-item" href="/#">Cartes</p>
       <p class="nav-item" href="/#">Factures</p>
       <p class="nav-item" href="/#">Options</p>
     </div>
     <div class="profile">
-      <a href="https://cv.bastienrigaud.fr" class="btn btn--download"
+      <a
+        href="https://cv.bastienrigaud.fr"
+        target="_blank"
+        class="btn btn--download"
         >Voir mon CV</a
       >
       <img src="/img/icons/pp.jpg" alt="" />
