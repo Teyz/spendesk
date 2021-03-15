@@ -7,20 +7,23 @@
             <li>
               <img src="/img/icons/icon-card-purple.png" alt="" />
               <div>
-                <h4>Générer une carte virtuelle</h4>
-                <p>Pour débloquer un nouvel alternant</p>
+                <h4>Recruter un nouvel alternant</h4>
+                <p>
+                  Agrandissez votre équipe en intégrant un alternant plus que
+                  motivé
+                </p>
               </div>
             </li>
           </a>
-          <li>
-            <img src="/img/icons/icon-remboursement.png" alt="" />
+          <li class="disable">
+            <img src="/img/icons/expense_icn.png" alt="" />
             <div>
               <h4>Demander un remboursement</h4>
               <p>Pour être remboursé</p>
             </div>
           </li>
-          <li>
-            <img src="/img/icons/icon-facture.png" alt="" />
+          <li class="disable">
+            <img src="/img/icons/receipt_icn.png" alt="" />
             <div>
               <h4>Soumettre une facture</h4>
               <p>Pour payer un fournisseur</p>
@@ -223,6 +226,10 @@ export default {
           border-bottom: 1px solid rgba(#4c4b5d, 0.2);
           width: auto;
 
+          &.disable {
+            background-color: #fafafa;
+          }
+
           img {
             width: 32px;
             height: 32px;
@@ -360,7 +367,6 @@ export default {
             align-items: center;
             padding: 24px;
             border-bottom: 1px solid rgba(#4c4b5d, 0.2);
-            width: 100%;
 
             img {
               width: 32px;

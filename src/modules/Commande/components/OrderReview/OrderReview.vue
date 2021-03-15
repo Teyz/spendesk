@@ -18,7 +18,7 @@
               <span>14 rue Albert Pitres</span>
               <span>33000 Bordeaux</span>
             </div>
-            <img src="/img/tampon.png" alt="" />
+            <img src="/img/tampon.jpg" alt="" />
           </div>
           <fieldset>
             <div class="input">
