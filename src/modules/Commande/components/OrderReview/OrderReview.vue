@@ -39,7 +39,7 @@
                 name="message"
                 rows="5"
                 cols="33"
-                placeholder="Me dire par exemple que vous voulez me recruter ;)"
+                placeholder="Donnez moi une heure, date et lieu. Je m'occupe de ramener le café et les croissants"
                 v-model="message"
               ></textarea>
             </div>
