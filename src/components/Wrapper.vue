@@ -20,12 +20,12 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 92px 0 0 0;
+  margin: 51px 0 0 0;
 
   @media screen and (min-width: 1024px) {
     justify-content: center;
     align-items: center;
-    margin: 124px 0 32px 0;
+    margin: 100px 0 32px 0;
   }
 }
 </style>

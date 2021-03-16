@@ -7,20 +7,23 @@
             <li>
               <img src="/img/icons/icon-card-purple.png" alt="" />
               <div>
-                <h4>Générer une carte virtuelle</h4>
-                <p>Pour débloquer un nouvel alternant</p>
+                <h4>Recruter un nouvel alternant</h4>
+                <p>
+                  Agrandissez votre équipe en intégrant un alternant plus que
+                  motivé
+                </p>
               </div>
             </li>
           </a>
-          <li>
-            <img src="/img/icons/icon-remboursement.png" alt="" />
+          <li class="disable">
+            <img src="/img/icons/expense_icn.png" alt="" />
             <div>
               <h4>Demander un remboursement</h4>
               <p>Pour être remboursé</p>
             </div>
           </li>
-          <li>
-            <img src="/img/icons/icon-facture.png" alt="" />
+          <li class="disable">
+            <img src="/img/icons/receipt_icn.png" alt="" />
             <div>
               <h4>Soumettre une facture</h4>
               <p>Pour payer un fournisseur</p>
@@ -40,23 +43,60 @@
                 <div class="inputs">
                   <div class="input">
                     <label for="alternance">Type d'alternance</label>
-                    <input
-                      name="alternance"
-                      type="text"
-                      placeholder="Contrat de professionnalisation"
-                    />
+                    <div class="radio-list">
+                      <div class="radio-container">
+                        <input
+                          class="radio-select"
+                          type="radio"
+                          name="radio"
+                          value="hour"
+                          checked
+                        />
+                        <div class="icon-container">
+                          <div class="icon-container-header">
+                            <img
+                              src="/img/icons/icon-payment-blue.png"
+                              alt=""
+                            />
+                            <span>Contrat de professionnalisation</span>
+                          </div>
+                          <p>
+                            Sur un rythme de 4 jours en entreprise et 1 jour en
+                            formation.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="radio-container">
+                        <input
+                          class="radio-select"
+                          type="radio"
+                          name="radio"
+                          value="ship"
+                          disabled
+                        />
+                        <div class="icon-container">
+                          <div class="icon-container-header">
+                            <img src="/img/icons/icon-reload.png" alt="" />
+                            <span>Contrat d'apprentissage</span>
+                          </div>
+                          <p>
+                            Ce contrat est indisponible actuellement.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </fieldset>
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="price">Coup de la formation</label>
+                    <label for="price">Cadre de la formation</label>
                     <input
                       name="price"
                       type="text"
                       disabled
-                      placeholder="8000€"
+                      placeholder="Mastère Développement web"
                     />
                   </div>
                 </div>
@@ -64,30 +104,30 @@
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="formation">Lieu de la formation</label>
-                    <select>
-                      <option value="" selected disabled hidden
-                        >ECV Digital Bordeaux</option
-                      >
-                      <option value="1" disabled
-                        >Hop hop doucement ! Je compte rester à l'ECV.</option
-                      >
-                    </select>
+                    <label for="fournisseur">Fournisseur</label>
+                    <div class="input-container">
+                      <input
+                        name="fournisseur"
+                        type="text"
+                        disabled
+                        placeholder="ECV Digital Bordeaux"
+                        class="fournisseurInput"
+                      />
+                      <img src="/img/ecv-black.svg" class="input_img" />
+                    </div>
                   </div>
                 </div>
               </fieldset>
               <fieldset>
                 <div class="inputs">
                   <div class="input">
-                    <label for="message">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="5"
-                      cols="33"
-                      placeholder="Du blablabla habituel BUT ce texte sera utilisé lors de l'envoie de l'email à la prochaine étape."
-                      v-model="message"
-                    ></textarea>
+                    <label for="formation">Code analytiques</label>
+                    <select>
+                      <option value="" selected disabled hidden
+                        >Rencontre avec un candidat</option
+                      >
+                      <option value="1" disabled>Prendre un café</option>
+                    </select>
                   </div>
                 </div>
               </fieldset>
@@ -95,7 +135,7 @@
                 <div class="inputs">
                   <div class="submit">
                     <button class="btn btn--white" @click="showForm()">
-                      Cancel
+                      Annuler
                     </button>
 
                     <button
@@ -103,7 +143,7 @@
                       @click="saveForm()"
                       class="btn btn--purple"
                     >
-                      Confirmer ma demande
+                      Confirmer
                     </button>
                   </div>
                 </div>
@@ -118,12 +158,10 @@
 
 <script>
 import { ref } from "vue";
-import store from "../store/store";
 import router from "@/router";
 export default {
   name: "Form",
   setup() {
-    let message = ref("");
     let showAction = ref(true);
     const showForm = () => {
       event.preventDefault();
@@ -131,11 +169,10 @@ export default {
     };
     const saveForm = () => {
       event.preventDefault();
-      store.state.message = message.value;
       router.push({ name: "Commande" });
     };
+
     return {
-      message,
       showAction,
       showForm,
       saveForm,
@@ -189,9 +226,13 @@ export default {
           border-bottom: 1px solid rgba(#4c4b5d, 0.2);
           width: auto;
 
+          &.disable {
+            background-color: #fafafa;
+          }
+
           img {
-            width: 50px;
-            height: 50px;
+            width: 32px;
+            height: 32px;
           }
 
           div {
@@ -206,7 +247,7 @@ export default {
             }
 
             p {
-              font-size: 16px;
+              font-size: 14px;
               text-align: left;
               margin: 0;
               color: #4c4b5d;
@@ -246,6 +287,25 @@ export default {
               display: flex;
               width: 100%;
 
+              .input-container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                  padding-left: 48px;
+                }
+                .input_img {
+                  position: absolute;
+                  top: 50%;
+                  left: 12px;
+                  transform: translateY(-50%);
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+
               .input {
                 display: flex;
                 flex-direction: column;
@@ -273,11 +333,12 @@ export default {
 
   @media screen and (min-width: 1024px) {
     margin: 0;
-    height: calc(100vh - 92px);
-    width: 450px;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    width: 370px;
     background-color: #fff;
     position: absolute;
-    top: 92px;
+    top: 70px;
     right: 0;
 
     .sliderContainer {
@@ -306,11 +367,10 @@ export default {
             align-items: center;
             padding: 24px;
             border-bottom: 1px solid rgba(#4c4b5d, 0.2);
-            width: 100%;
 
             img {
-              width: 50px;
-              height: 50px;
+              width: 32px;
+              height: 32px;
             }
 
             div {
@@ -353,7 +413,7 @@ export default {
               flex-direction: column;
               justify-content: center;
               align-items: flex-start;
-              margin-top: 16px;
+              margin-top: 10px;
 
               .inputs {
                 display: flex;
@@ -364,6 +424,25 @@ export default {
                   flex-direction: column;
                   padding: 0 8px;
                   width: 100%;
+
+                  .input-container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    input {
+                      padding-left: 48px;
+                    }
+                    .input_img {
+                      position: absolute;
+                      top: 50%;
+                      left: 12px;
+                      transform: translateY(-50%);
+                      width: 32px;
+                      height: 32px;
+                    }
+                  }
 
                   .error {
                     color: red;
@@ -381,6 +460,83 @@ export default {
             }
           }
         }
+      }
+    }
+  }
+}
+$white: #ffffff;
+$bg: #6ebdf9;
+.radio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.radio-container {
+  &:first-child {
+    margin-bottom: 16px;
+  }
+  position: relative;
+  width: 100%;
+
+  & .icon-container {
+    padding: 16px;
+    border: 1px $bg solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .icon-container-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4px;
+
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  & span {
+    margin-left: 8px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 800;
+  }
+
+  & p {
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
+    line-height: 16px;
+    color: #9090a3;
+  }
+
+  & .radio-select {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+    $trans: all 0.3s ease-in-out;
+    &:checked + .icon-container {
+      background-color: #f0f9fe;
+    }
+
+    &:disabled + .icon-container {
+      background-color: #fafafa;
+      border: 1px solid #c0c0c7;
+
+      span {
+        color: #908f9e;
       }
     }
   }

@@ -4,15 +4,20 @@
       <a class="nav-item" href="/">
         <img src="/img/logo.png" alt="" />
       </a>
-      <p class="nav-item active" href="/#">Request</p>
-      <p class="nav-item" href="/#">Payments</p>
-      <p class="nav-item" href="/#">Subscriptions</p>
-      <p class="nav-item" href="/#">Cards</p>
-      <p class="nav-item" href="/#">Invoices</p>
-      <p class="nav-item" href="/#">Settings</p>
+      <p class="nav-item active" href="/#">Requêtes</p>
+      <p class="nav-item" href="/#">Paiements</p>
+      <p class="nav-item" href="/#">Abonnements</p>
+      <p class="nav-item" href="/#">Cartes</p>
+      <p class="nav-item" href="/#">Factures</p>
+      <p class="nav-item" href="/#">Options</p>
     </div>
     <div class="profile">
-      <a href="" class="btn btn--download">Visit my CV</a>
+      <a
+        href="https://cv.bastienrigaud.fr"
+        target="_blank"
+        class="btn btn--download"
+        >Voir mon CV</a
+      >
       <img src="/img/icons/pp.jpg" alt="" />
     </div>
   </div>
@@ -32,11 +37,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 
+  .navbar {
+    img {
+      border-radius: 4px;
+    }
+  }
+
   .profile {
     margin-right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      border-radius: 4px;
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -67,8 +82,8 @@ export default {
         align-items: center;
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 30px;
+          height: 30px;
         }
       }
     }

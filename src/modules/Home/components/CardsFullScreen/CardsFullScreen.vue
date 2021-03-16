@@ -12,26 +12,19 @@
             <img src="/img/icons/icon-payment.png" alt="" />
             <div>
               <h4>89,606.02€</h4>
-              <p>Loaded on cards</p>
+              <p>Chargés sur la carte</p>
             </div>
           </li>
           <li>
             <img src="/img/icons/icon-card.png" alt="" />
             <div>
-              <h4>89,606.02€</h4>
-              <p>Loaded on cards</p>
+              <h4>8,603.06€</h4>
+              <p>Transaction en attente</p>
             </div>
           </li>
         </ul>
       </div>
     </div>
-    <!-- <div class="cardsFullScreenInfo">
-      <div class="cardMain">
-        <h4>Le saviez vous ?</h4>
-        <p>Vous pouvez recruter Bastien Rigaud en tant que développeur web.</p>
-        <a href="">En savoir plus</a>
-      </div>
-    </div> -->
   </section>
 </template>
 
@@ -64,14 +57,16 @@ export default {
       margin: 0;
       padding: 0;
       list-style: none;
+      width: 100%;
 
       li {
         display: flex !important;
         justify-content: flex-start;
         align-items: center;
-        width: 20vw;
+        width: 100%;
         @media screen and (min-width: 1024px) {
           padding-left: 24px;
+          width: 20vw;
         }
 
         &:first-child {
@@ -84,8 +79,8 @@ export default {
         }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 32px;
+          height: 32px;
         }
 
         div {
@@ -95,9 +90,14 @@ export default {
           flex-direction: column;
           margin-left: 16px;
 
+          h4 {
+            font-size: 18px;
+          }
+
           p {
             margin: 0;
             color: #4c4b5d;
+            font-size: 16px;
           }
         }
       }
@@ -105,7 +105,7 @@ export default {
   }
   @media screen and (min-width: 1024px) {
     flex-direction: row;
-    margin-top: 64px;
+    margin-top: 24px;
 
     .cardsFullScreenMain {
       display: flex;
@@ -125,6 +125,11 @@ export default {
 
         p {
           color: #4c4b5d;
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 16px;
         }
       }
     }
