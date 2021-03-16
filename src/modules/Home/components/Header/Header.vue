@@ -5,7 +5,7 @@
         <img src="/img/index/cafe.png" alt="" />
       </div>
       <div class="headerContent">
-        <h2>Good morning Guilhem</h2>
+        <h2>Bonjour Spendesk</h2>
         <p>Vous avez des choses à faire aujourd'hui:</p>
         <div class="ctaContent">
           <button class="button-arrow">

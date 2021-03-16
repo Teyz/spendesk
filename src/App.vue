@@ -37,11 +37,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 
+  .navbar {
+    img {
+      border-radius: 4px;
+    }
+  }
+
   .profile {
     margin-right: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      border-radius: 4px;
+    }
   }
 
   @media screen and (min-width: 1024px) {

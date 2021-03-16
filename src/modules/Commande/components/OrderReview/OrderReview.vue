@@ -39,7 +39,7 @@
                 name="message"
                 rows="5"
                 cols="33"
-                placeholder="Donnez moi une heure, date et lieu. Je m'occupe de ramener le café et les croissants"
+                placeholder="Vous pouvez me parler de tout et de rien, ou bien fixer une date pour qu’on puisse se rencontrer :)"
                 v-model="message"
               ></textarea>
             </div>
