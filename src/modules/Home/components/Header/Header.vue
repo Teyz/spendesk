@@ -8,11 +8,11 @@
         <h2>Bonjour Spendesk</h2>
         <p>Vous avez des choses à faire aujourd'hui:</p>
         <div class="ctaContent">
-          <button class="button-arrow">
+          <button class="button-arrow" @click="setShowAction">
             <strong>1</strong>
             Candidature non lue
           </button>
-          <button class="button-arrow">
+          <button class="button-arrow" @click="setShowAction">
             <strong>1</strong>
             Alternant à recruter
           </button>
@@ -23,8 +23,17 @@
 </template>
 
 <script>
+import store from "@/store/store";
 export default {
   name: "Header",
+  setup() {
+    const setShowAction = () => {
+      store.commit("setShowAction");
+    };
+    return {
+      setShowAction,
+    };
+  },
 };
 </script>
 

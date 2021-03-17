@@ -1,7 +1,7 @@
 <template>
   <section class="slideRoot">
     <div class="sliderContainer">
-      <div class="cardList" v-if="showAction">
+      <div class="cardList" v-if="$store.state.isShow">
         <ul>
           <a href="" @click="showForm()">
             <li>
@@ -157,15 +157,19 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import store from "@/store/store";
 import router from "@/router";
+import { reactive } from "vue";
 export default {
   name: "Form",
   setup() {
-    let showAction = ref(true);
+    const setShowAction = () => {
+      store.commit("setShowAction");
+    };
+
     const showForm = () => {
       event.preventDefault();
-      showAction.value = !showAction.value;
+      setShowAction();
     };
     const saveForm = () => {
       event.preventDefault();
@@ -173,7 +177,6 @@ export default {
     };
 
     return {
-      showAction,
       showForm,
       saveForm,
     };
