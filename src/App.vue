@@ -13,6 +13,12 @@
     </div>
     <div class="profile">
       <a
+        href="https://github.com/Teyz/spendesk/tree/master"
+        target="_blank"
+        class="btn btn--download"
+        >Code source</a
+      >
+      <a
         href="https://cv.bastienrigaud.fr"
         target="_blank"
         class="btn btn--download"
