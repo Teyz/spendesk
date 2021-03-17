@@ -18,12 +18,6 @@
         class="btn btn--download"
         >Code source</a
       >
-      <a
-        href="https://cv.bastienrigaud.fr"
-        target="_blank"
-        class="btn btn--download"
-        >Voir mon CV</a
-      >
       <img src="/img/icons/pp.jpg" alt="" />
     </div>
   </div>
