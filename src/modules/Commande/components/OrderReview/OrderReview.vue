@@ -28,6 +28,7 @@
                 type="email"
                 placeholder="bastien.rigaud@spendesk.com"
                 v-model="email"
+                required
               />
             </div>
           </fieldset>
@@ -41,6 +42,7 @@
                 cols="33"
                 placeholder="Vous pouvez me parler de tout et de rien, ou bien fixer une date pour qu’on puisse se rencontrer :)"
                 v-model="message"
+                required
               ></textarea>
             </div>
           </fieldset>
